@@ -8,6 +8,9 @@ body{
   margin: 0;
 
 }
+#root{
+  height: 100%;
+}
 .grid-container{
   display: grid;
   grid-template-areas:
@@ -93,6 +96,7 @@ a:hover{
 .product-name{
   font-size: 2rem;
   font-weight: bold;
+  color:#FF00FF;
 }
 .product-size{
   font-size: 1.2rem;
@@ -120,6 +124,7 @@ a:hover{
 }
 .sidebar{
   position: fixed;
+  transition: all .5 se;
   transform: translateX(-30rem);
   width: 30rem;
   background-color: #f0f0f0;
