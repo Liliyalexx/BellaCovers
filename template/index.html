@@ -7,8 +7,11 @@
   <body>
     <div class="grid-container">
       <header class = "header">
-      <div class = "brand" >
-        <a href="index.html">Bella Covers</a>
+      <div class = "brand">
+        <button onClick="openMenu()">
+          &#9776;
+        </button>
+        <a class="brand-name" href="index.html">Bella Covers</a>
       </div>
       <div class="header-links">
         <a href="cart.html">Cart</a> 
@@ -16,6 +19,24 @@
 
       </div>
       </header>
+      <aside class="sidebar">
+        <h3>
+          Shopping categories
+        </h3>
+        <button class="sidebar-close-button" onclick="closeMenu()">x</button>
+        <ul>
+          <li>
+            <a href="index.html"> Slipcovers for Sofas</a>
+          </li>
+            <li>
+              <a href="index.html"> Slipcovers for Armchairs</a>
+            </li>
+            <li>
+            <a href="index.html"> Slipcovers for Chairs</a>
+          </li>
+        </ul>
+      </aside>
+
       
       <main class="main">
         <div class="content">
@@ -66,6 +87,28 @@
                 <div class="product-rating">4.5 Stars (10 Reviews)</div>
               </div>
             </li>
+            <li>
+              <div class = "product">
+                <img class ="product-image" src="images/waves.jpg" alt="product"/>
+                <div class="product-name"> 
+                  <a href = "product.html">Slipcover for Sofa </a> 
+                </div>
+                <div class ="product-size"> Two Seat</div>
+                <div class ="product-price"> $40 </div>
+                <div class="product-rating">4.5 Stars (10 Reviews)</div>
+              </div>
+            </li>
+            <li>
+              <div class = "product">
+                <img class ="product-image" src="images/waves.jpg" alt="product"/>
+                <div class="product-name"> 
+                  <a href = "product.html">Slipcover for Sofa </a> 
+                </div>
+                <div class ="product-size"> Two Seat</div>
+                <div class ="product-price"> $40 </div>
+                <div class="product-rating">4.5 Stars (10 Reviews)</div>
+              </div>
+            </li>
 
           </ul>
         </div>
@@ -75,5 +118,14 @@
         All right reserved.
       </footer>
     </div>
+    <script>
+      function openMenu(){
+        document.querySelector(".sidebar").classList.add("open");
+      }
+      function closeMenu(){
+        document.querySelector(".sidebar").classList.remove("open");
+      }
+
+    </script>
   </body>
 </html>
