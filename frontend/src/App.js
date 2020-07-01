@@ -16,7 +16,7 @@ function App() {
 
   return (
     <BrowserRouter>
-    <div className="grid-container">
+    <div className = "grid-container">
       <header className = "header">
       <div className = "brand">
         <button onClick={openMenu}>
@@ -45,17 +45,20 @@ function App() {
 
       
       <main className="main">
-      <Route path="/products/:id" component={ProductScreen} />
+      <div className="content">
+      <Route path="/product/:id" component={ProductScreen} />
       <Route path="/" exact={true} component={HomeScreen} />
-         
-        
+      
+      </div>
        
       </main>
+
       <footer className ="footer">
         All right reserved.
       </footer>
     </div>
     </BrowserRouter>
+
   );
 }
 

@@ -147,3 +147,20 @@ a:hover{
   right: .5rem;
   top: 1.5rem
 } 
+/*Product Details*/
+.details {
+  display:flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap:wrap;
+}
+.details-image {
+  flex: 2 1 60rem;
+
+}
+.details-info {
+  flex: 2 1 60rem;
+}
+.details-action {
+  flex: 2 1 60rem;
+}
