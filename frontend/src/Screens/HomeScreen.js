@@ -11,6 +11,7 @@ function HomeScreen(props){
      const {data} = await axios.get("/api/products");
      setProduct(data);
    }
+   fetchData();
     return () =>{
       //
     };
@@ -20,9 +21,9 @@ function HomeScreen(props){
   
   return <ul className = "products"> 
   {
-    data.products.map (product=> 
+   products.map (product=> 
   
-    <li>
+    <li key ={product._id}>
       <div className = "product">
       <Link to={'/product/' + product._id}>
       <img className="product-image" src={product.image} alt="product" />
