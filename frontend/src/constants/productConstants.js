@@ -1,0 +1,3 @@
+export const Product_LIST_REQUEST='PRODUCT_LIST_REQUEST';
+export const Product_LIST_SUCCESS='PRODUCT_LIST_REQUEST';
+export const Product_LIST_REQUEST='PRODUCT_LIST_REQUEST';
