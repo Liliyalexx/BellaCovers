@@ -8,7 +8,8 @@ export default {
     price: 40, 
     size: 'Two Seats',
     rating: 4.5, 
-    numReviews: 11
+    numReviews: 11,
+    countInStock: 6,
 
   },
   {
@@ -19,7 +20,8 @@ export default {
     price: 30, 
     size: 'One Seat',
     rating: 4.5, 
-    numReviews: 12
+    numReviews: 12,
+    countInStock: 6,
 
   },
   {
@@ -30,7 +32,8 @@ export default {
     price: 20, 
     size: 'One Seat',
     rating: 5, 
-    numReviews: 13
+    numReviews: 13,
+    countInStock: 6,
 
   },
   {
@@ -41,7 +44,8 @@ export default {
     price: 20, 
     size: 'One Seat',
     rating: 5, 
-    numReviews: 13
+    numReviews: 13,
+    countInStock: 6,
 
   }
   

@@ -1,8 +1,11 @@
 import React from 'react';
+import ReactDOM from 'react-dom'
 import {BrowserRouter, Route, Link} from 'react-router-dom';
 import './App.css';
 import HomeScreen from './screens/HomeScreen';
 import ProductScreen from './screens/ProductScreen';
+import { useSelector } from 'react-redux';
+
 
 
 function App() {
@@ -18,9 +21,7 @@ function App() {
     <div className = "grid-container">
       <header className = "header">
       <div className = "brand">
-        <button onClick={openMenu}>
-          &#9776;
-        </button>
+        <button onClick={openMenu}>&#9776;</button>
         <Link to="/">Bella Covers</Link>
       </div>
       <div className="header-links">
@@ -33,19 +34,24 @@ function App() {
         <h3>
           Shopping categories
         </h3>
-        <button className="sidebar-close-button" onClick={closeMenu}>x</button>
-        <ul>
-          <li>
-            <a href="index.html"> Slipcovers for Sofas</a>
-          </li>
-            
-        </ul>
-      </aside>
+        <button className="sidebar-close-button" onClick={closeMenu}>
+            x
+          </button>
+          <ul className="categories">
+            <li>
+              <Link to="/category/Slipcovers for Sofa">Slipcovers for Sofa</Link>
+            </li>
+
+            <li>
+              <Link to="/category/Slipcovers for Armchair">Slipcovers for Armchair</Link>
+            </li>
+          </ul>
+        </aside>
 
       
       <main className="main">
       <div className="content">
-      <Route path="/product/:id" component={ProductScreen} />
+      <Route path='/product/:id' component={ProductScreen} />
       <Route path="/" exact={true} component={HomeScreen} />
       
       </div>
