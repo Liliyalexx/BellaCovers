@@ -6,7 +6,7 @@ import { PRODUCT_LIST_REQUEST,
          PRODUCT_DETAILS_FAIL 
         } from "../constants/productConstants";
 
-        function productListReducer(state = { products: [] }, action) {
+    function productListReducer(state = { products: [] }, action){
           switch (action.type) {
             case PRODUCT_LIST_REQUEST:
               return { loading: true, products: [] };

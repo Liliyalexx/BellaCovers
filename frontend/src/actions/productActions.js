@@ -6,13 +6,16 @@ import { PRODUCT_LIST_REQUEST,
          PRODUCT_DETAILS_FAIL} 
          from "../constants/productConstants"
 import axios from 'axios';
+import Cookie from "js-cookie";
+import Axios from 'axios';
+
 
 
 const listProducts = (
   category = '',
   searchKeyword = '',
   sortOrder = ''
-) => async (dispatch) => {
+) => async (dispatch, getState) => {
   try {
 
     dispatch({ type: PRODUCT_LIST_REQUEST });
