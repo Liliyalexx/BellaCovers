@@ -1,10 +1,8 @@
 import React from 'react';
-import ReactDOM from 'react-dom'
 import {BrowserRouter, Route, Link} from 'react-router-dom';
 import './App.css';
 import HomeScreen from './screens/HomeScreen';
 import ProductScreen from './screens/ProductScreen';
-import { useSelector } from 'react-redux';
 import CartScreen from './screens/CartScreen';
 
 
@@ -35,16 +33,14 @@ function App() {
         <h3>
           Shopping categories
         </h3>
-        <button className="sidebar-close-button" onClick={closeMenu}>
-            x
-          </button>
-          <ul className="categories">
+        <button className="sidebar-close-button" onClick={closeMenu}>x</button>
+          <ul>
             <li>
-              <Link to="/category/Slipcovers for Sofa">Slipcovers for Sofa</Link>
+              <a href="index.html">Slipcovers for Sofa</a>
             </li>
 
             <li>
-              <Link to="/category/Slipcovers for Armchair">Slipcovers for Armchair</Link>
+              <a href="index.html">Slipcovers for Armchair</a>
             </li>
           </ul>
         </aside>

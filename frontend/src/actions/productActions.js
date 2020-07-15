@@ -6,16 +6,8 @@ import { PRODUCT_LIST_REQUEST,
          PRODUCT_DETAILS_FAIL} 
          from "../constants/productConstants"
 import axios from 'axios';
-import Cookie from "js-cookie";
-import Axios from 'axios';
 
-
-
-const listProducts = (
-  category = '',
-  searchKeyword = '',
-  sortOrder = ''
-) => async (dispatch, getState) => {
+const listProducts = () => async (dispatch) => {
   try {
 
     dispatch({ type: PRODUCT_LIST_REQUEST });
@@ -32,14 +24,13 @@ const detailsProduct = (productId) => async (dispatch) => {
   try{ 
     dispatch({type: PRODUCT_DETAILS_REQUEST, payload: productId});
 
-    const {data} = await axios.get("/api/products/" + productId);
+    const { data } = await axios.get("/api/products/" + productId);
 
-    dispatch ({type:PRODUCT_DETAILS_SUCCESS, payload:data});
+    dispatch({ type: PRODUCT_DETAILS_SUCCESS, payload: data });
+  } catch (error) {
+    dispatch({ type: PRODUCT_DETAILS_FAIL, payload: error.message });
 
-   } catch (error) {
-
-    dispatch ({type: PRODUCT_DETAILS_FAIL, payload:error.message})
-   }
   }
+}
 
-export { listProducts, detailsProduct };
+export { listProducts, detailsProduct }
