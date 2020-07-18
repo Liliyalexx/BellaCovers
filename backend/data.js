@@ -47,7 +47,7 @@ export default {
     numReviews: 13,
     countInStock: 6,
 
-  },
+  }
   
 ]
 }

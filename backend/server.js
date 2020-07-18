@@ -1,6 +1,4 @@
 import express from 'express';
-import path from 'path';
-import productRoute from './routes/productRoute';
 import data from './data';
 
 
@@ -18,4 +16,4 @@ app.get("/api/products/:id", (req, res) => {
 
 app.get("/api/products", (req, res) => {	
   res.send(data.products);	  
-});	
+});
