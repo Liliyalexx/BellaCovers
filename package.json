@@ -3,12 +3,11 @@
   "version": "1.0.0",
   "description": "E-comerce",
   "main": "index.js",
-  
-    "scripts": {
-      "start": "nodemon --watch backend --exec babel-node backend/server.js",
-      "client": "npm start --prefix frontend",
-      "dev": "concurrently \"npm run start\" \"npm run client\""
-    },
+  "scripts": {
+    "start": "nodemon --watch backend --exec babel-node backend/server.js",
+    "client": "npm start --prefix frontend",
+    "dev": "concurrently \"npm run start\" \"npm run client\""
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Liliyalexx/BellaCovers.git"
@@ -20,7 +19,9 @@
   },
   "homepage": "https://github.com/Liliyalexx/BellaCovers#readme",
   "dependencies": {
-    "express": "^4.17.1"
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "mongoose": "^5.9.26"
   },
   "devDependencies": {
     "@babel/cli": "^7.10.4",
