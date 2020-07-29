@@ -1,3 +1,3 @@
 export default{
-  MONGODB_URL: process.env.MONGO_URL || 'mongodb://localhost/bellacovers'
+  MONGODB_URL: process.env.MONGODB_URL || 'mongodb://localhost/bellacovers'
 }
