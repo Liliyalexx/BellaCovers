@@ -1,4 +1,11 @@
 export default {
+  users:[
+    {
+      name: 'Liliya',
+      email: 'liliya@example.com',
+      password: bcrypt.hashAsync('1234', 8)
+    }
+  ]
   products: [
     {
       _id: '1',

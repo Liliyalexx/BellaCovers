@@ -1,9 +1,9 @@
 import express from 'express';
-import User from '../models/userModel';
 
-const router = express.Router();
 
-router.get("/createadmin", async (req, res)=>{
+const userRouter = express.Router();
+
+userRouter.get('/seed', async (req, res)=>{
   try { 
     const user = new User({
       name: 'Liliya',
@@ -19,4 +19,4 @@ router.get("/createadmin", async (req, res)=>{
       res.send({msg: error.message});
     }
 })
-export default router;
+export default userRouter;
