@@ -1,9 +1,10 @@
 import express from 'express';
 import mongoose from 'mongoose';
-import data from './data';
 // import dotenv from 'dotenv';
 // import config from './config';
-import userRouter from './routes/userRouter';
+import productRouter from './routers/productRouter';
+import userRouter from './routers/userRouter';
+
 
 const app = express();
 mongoose.connect(process.env.MONGODB_URL || 'mongodb://localhost/bellacovers', {
@@ -12,19 +13,9 @@ mongoose.connect(process.env.MONGODB_URL || 'mongodb://localhost/bellacovers', {
   useCreateIndex: true,
 });
 
-app.get('/api/products/:id', (req, res) => {
-  const product = data.products.find((x) => x._id === req.params.id);
-  if (product) {
-    res.send(product);
-  } else {
-    res.status(404).send({ message: 'Product Not Found' });
-  }
-});
 
-app.get('/api/products', (req, res) => {
-  res.send(data.products);
-});
 app.use('/api/users', userRouter);
+app.use('/api/products', productRouter);
 app.get('/', (req, res) => {
   res.send('Server is ready');
 });
