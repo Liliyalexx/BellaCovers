@@ -2,8 +2,8 @@ import express from 'express';
 import mongoose from 'mongoose';
 // import dotenv from 'dotenv';
 // import config from './config';
-import productRouter from './routers/productRouter';
-import userRouter from './routers/userRouter';
+import productRouter from './routers/productRouter.js';
+import userRouter from './routers/userRouter.js';
 
 
 const app = express();
