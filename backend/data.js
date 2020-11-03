@@ -1,6 +1,6 @@
- import bcrypt from 'bcryptjs';
+import bcrypt from 'bcryptjs';
  
- const data = {
+const data = {
   users:[
     {
       name: 'Liliya',

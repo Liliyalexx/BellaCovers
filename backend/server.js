@@ -1,9 +1,8 @@
 import express from 'express';
 import mongoose from 'mongoose';
-// import dotenv from 'dotenv';
-// import config from './config';
 import productRouter from './routers/productRouter.js';
 import userRouter from './routers/userRouter.js';
+
 
 
 const app = express();
@@ -12,7 +11,6 @@ mongoose.connect(process.env.MONGODB_URL || 'mongodb://localhost/bellacovers', {
   useUnifiedTopology: true,
   useCreateIndex: true,
 });
-
 
 app.use('/api/users', userRouter);
 app.use('/api/products', productRouter);
@@ -26,5 +24,4 @@ app.use((err, req, res, next) => {
 
 const port = process.env.PORT || 5000;
 app.listen(port, () => {
-  console.log(`Serve at http://localhost:${port}`);
-});
+  console.log(`Serve at http://localhost:${port}`)
