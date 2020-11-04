@@ -216,16 +216,13 @@ cartItems.length === 0 ? cart is empty
 show item image, name, qty and price
 Proceed to Checkout button
 
-17)
-
-Implement remove from cart action
+17)Implement remove from cart action
 Implement Remove From Cart Action
 create removeFromCart constants, actions and reducers
 add reducer to store.js
 use action in CartScreen.js
 
-18)
-Create Sample Users In MongoDB
+18)Create Sample Users In MongoDB
 npm install mongoose
 connect to mongodb
 create config.js
@@ -237,3 +234,19 @@ create models/productModel.js
 create productSchema and productModel
 create userRoute
 Seed sample data
+
+19)Create Sample Products In MongoDB
+create models/productModel.js
+create productSchema and productModel
+create productRoute
+Seed sample data
+
+20)Create Sign-in Backend
+create /signin api
+check email and password
+generate token
+install json web token
+install dotenv
+return token and data
+test it using postman
+
