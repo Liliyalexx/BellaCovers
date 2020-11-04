@@ -3,8 +3,6 @@ import mongoose from 'mongoose';
 import productRouter from './routers/productRouter.js';
 import userRouter from './routers/userRouter.js';
 
-
-
 const app = express();
 mongoose.connect(process.env.MONGODB_URL || 'mongodb://localhost/bellacovers', {
   useNewUrlParser: true,
@@ -24,4 +22,5 @@ app.use((err, req, res, next) => {
 
 const port = process.env.PORT || 5000;
 app.listen(port, () => {
-  console.log(`Serve at http://localhost:${port}`)
+  console.log(`Serve at http://localhost:${port}`);
+});
