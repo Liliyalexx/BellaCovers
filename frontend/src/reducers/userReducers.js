@@ -29,8 +29,8 @@ export const userSigninReducer = (state = {}, action) => {
       return { loading: false, userInfo: action.payload };
     case USER_SIGNIN_FAIL:
       return { loading: false, error: action.payload };
-    case USER_SIGNOUT:
-      return {};
+      case USER_SIGNOUT:
+        return {};
     default:
       return state;
   }

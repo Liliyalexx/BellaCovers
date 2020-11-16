@@ -281,3 +281,7 @@ implement shipping constant, actions and reducers
  Create Payment Screen
  1. create payment fields
  2. implement shipping constant, actions and reducers 
+
+26) 
+1. design order summary fields
+2. design order action

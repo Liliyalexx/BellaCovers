@@ -5,11 +5,13 @@ import {detailsProduct} from '../actions/productActions';
 
 
 
-function ProductScreen(props) {
+export default function ProductScreen(props) {
   const [qty, setQty] = useState(1);
-  const productDetails = useSelector(state =>state.productDetails);
+  const productDetails = useSelector((state) =>state.productDetails);
   const {product, loading, error} = productDetails; 
   const dispatch = useDispatch();
+  const productId = props.match.params.id;
+  
   
   useEffect(() => {
     dispatch (detailsProduct(props.match.params.id));
@@ -83,4 +85,3 @@ function ProductScreen(props) {
 
   </div>
 }
-export default ProductScreen;
